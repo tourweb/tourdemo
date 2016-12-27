@@ -1,0 +1,127 @@
+<?php include"domain.php";
+require_once('indiator_admin/connect.php');
+ $con=new clscon();
+ $link=$con->db_connect();
+if($_REQUEST['oid']!=""){
+  $user_id = $_REQUEST['oid'];
+  $query_res = mysqli_query("select * from  booking_res where user_id_no=".$user_id);
+  $row_res = mysql_fetch_array($link,$query_res);
+  $num_rows_res = mysqli_num_rows($query_res);
+  
+  if($num_rows_res==1){ 
+    if($row_res['res_code']==0){ $message = "Thank you for the Payment.<br>Please download the receipt of your payment from the link below.<br>Please contact us here if there was any complications in the payment process.";}
+  }else{
+    $message = $row_res['res_msg'];
+    while($row = mysqli_fetch_array($query_res)){
+      $message_tot.= $row['res_msg']."##";
+    }
+    $message_tot = substr($message_tot,0,strlen($message_tot)-2);
+    $last_pos = strrpos($message_tot,"##");
+    $message = substr($message_tot, $last_pos+2,strlen($message_tot));
+  }
+}
+// OPEN - ICICI PAYMENT Success RESPONSE 
+if($_REQUEST['oid']!=""){
+  $user_id = $_REQUEST['oid'];
+  $query_res = mysqli_query($link,"select * from  open_payment where id=".$user_id);
+  $row_res = mysqli_fetch_array($query_res);
+  $num_rows_res = mysqli_num_rows($query_res);
+  
+  if($num_rows_res==1){ 
+    if($row_res['res_code']==0){ $message = "Thank you for the Payment.Check your mail for Order and Login Details<br>Please download the receipt of your payment from the link below.<br>Please contact us here if there was any complications in the payment process.";}
+  } else{
+    echo "Oops!!";
+  } 
+  
+  //if($row_res['pay_by']=="Citrus"){
+    $pdf="<a href='pdf/payment-pdf.php?ordr=".$user_id."' class='btn-brown' title='Download Payment Receipt pdf'><img src='https://indiator.com/images/pdf.png' alt='Download Payment Receipt pdf' width='18'> Download Payment Receipt</a>";
+  /*}
+  else {
+    $pdf = "";
+  }*/
+}
+
+?>
+
+<!doctype html>
+
+<html>
+<head>
+    <title>Success-Indiator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="travel, trip, store, shopping, siteweb, cart">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,600,300' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'/>
+
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" rel="stylesheet" type="text/css" />
+        <link href="css/travel-mega-menu.css" rel="stylesheet" type="text/css" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+        <!--Carousel-->
+        <link href="css/carousel/component.css" rel="stylesheet" type="text/css" />
+
+        <link href="css/layout2.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp" type="text/javascript"></script>
+
+</head>
+	<body>
+
+    <!-- Section Form Login and Register -->
+    <div class="login-page">
+           <?php include("includes/login.php"); ?>
+        </div>
+
+<?php include("includes/contact-info.php"); ?>
+    <?php include("includes/menu.php"); ?>
+    <div class="clear"></div>
+    
+  <section id="about2" class="about-section-top">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-12">
+               <div class="page-title pull-left">
+                    <h2 class="title-about">Success</h2>
+                </div>
+                <ul class="breadcrumbs pull-right">
+                    <li><a href="index.php">HOME</a></li>
+                    <li>/</li>
+                   
+                 
+                </ul>
+             </div>
+          </div>
+      </div>
+    </section>
+<section id="top-info-contact">
+   <div class="container">
+      <div class="row">
+         <div class="contact-page col-md-12 effect-5 effects">
+                
+
+                  <h3><?php echo $message; ?><img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/874177804/?label=oO5pCMLg4msQjMrroAM&amp;guid=ON&amp;script=0"/></h3>
+                      <?php if($pdf!=""){echo $pdf;}?>
+               
+                
+              </div>
+          </div>
+     </div>
+</section>   
+                 
+
+
+
+
+<?php include("includes/footer.php"); ?>
+    
+
+	</body>
+
+</html>

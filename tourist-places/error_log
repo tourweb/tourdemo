@@ -1,0 +1,2 @@
+[10-Nov-2016 09:22:39 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 65552 bytes) in /home/mfcgroup786/public_html/indiator.com/tourist-places/wp-includes/shortcodes.php on line 450
+[10-Nov-2016 09:22:41 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 65552 bytes) in /home/mfcgroup786/public_html/indiator.com/tourist-places/wp-includes/shortcodes.php on line 450

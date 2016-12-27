@@ -1,0 +1,205 @@
+.logo_holder{
+	display: inline-block;
+   position: absolute;
+    top: 1px;
+    z-index: 2;
+   background: rgba(255, 255, 255, 0.46) none repeat scroll 0 0;
+    padding: 12px 20px 10px;
+}
+
+.enq_holder{
+	/*position:absolute;
+	height:100%;
+	width:300px;*/
+    height: auto;
+    left: 528px;
+    opacity: 1;
+    overflow: visible;
+    position: absolute;
+    top: 47px;
+    width: 526px;	
+}
+
+  .fancybox-skin {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #444;
+    position: relative;
+    text-shadow: none;
+}
+ 
+ 
+ .fancybox-outer, .fancybox-inner {
+    position: relative;
+}   
+   
+ #senq_auto .maindiv {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-radius: 3px;
+    clear: both;
+    height: 280px !important;
+    margin-top: 4px;
+    overflow: visible;
+    padding: 4px;
+} 
+
+.head{
+	 margin-bottom: 18px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.head h4{
+	font-weight:600;
+	color:#2B388F;
+	font-size:20px;
+}
+
+#float-div{
+	width:300px;
+	max-width:300px;
+	overflow-x:hidden;
+}
+
+
+
+
+
+.fl_h_holder {
+    background: #37b34a none repeat scroll 0 0;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    max-width: 215px;
+    padding: 1px;
+    margin-bottom:20px;
+}
+
+.float_btn {
+    	 background:#2B388F none repeat scroll 0 0;
+         border: 1px solid #2B388F;
+   }
+   
+.float_btn:hover{
+	 background: #2B388F none repeat scroll 0 0;
+     border: 1px solid #2B388F;
+}
+
+
+
+
+.mfp-dialog1 {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+    margin: 40px auto;
+    text-align: left;
+  }   
+
+.new_form_ctrl{
+	border-radius:0px;
+	height:28px;
+}
+
+.pkg_det li {
+    float: left;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+ /*   list-style: inside none disc;*/
+    margin-right: 9px;
+}
+
+.pkg_det {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+
+.main-date {
+    color: #000;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 13px;
+    margin-top: 13px;
+    padding-left: 17px;
+    text-align: left;
+    font-weight:600;
+}
+
+
+.vertical-alignnew {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    bottom: 43px;
+    color: #000 !important;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    width: 300px;
+}
+
+.tour-item.style-2 .tour-weather1 {
+    background:#ED725E;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+
+.tour-weather1 {
+    border-radius: 7px;
+    font-weight: 600;
+    height: 25px;
+    right: 20px;
+    padding: 0 19px;
+    position: absolute;
+    top: 20px;
+}
+
+
+#special-enquiry h4 {
+    border-bottom: 1px solid #ddd;
+    color: #096bab;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding: 0 0 10px;
+    text-transform: none;
+}
+
+#special-enquiry h6 {
+    text-transform: none;
+}
+
+.incl{
+	margin-top: 7px;
+}
+
+.incl h5{
+	color: #096BAB;
+	font-weight:600;
+}
+
+.incl p{
+	font-size:13px;
+}
+
+
+.itry {
+    color: #000;
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 3px;
+    padding: 0 20px 0 0;
+}
+
+
+
+
+
+
+

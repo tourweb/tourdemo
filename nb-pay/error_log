@@ -1,0 +1,6 @@
+[19-Feb-2016 20:30:28 America/Denver] PHP Notice:  Undefined index: PaymentId in /home1/indiato6/public_html/nb-pay/Response.php on line 11
+[19-Feb-2016 20:30:28 America/Denver] PHP Notice:  Undefined variable: pgrespcode in /home1/indiato6/public_html/nb-pay/Response.php on line 165
+[19-May-2016 03:07:02 America/Denver] PHP Notice:  Undefined index: PaymentId in /home1/indiato6/public_html/nb-pay/Response.php on line 11
+[19-May-2016 03:07:02 America/Denver] PHP Notice:  Undefined variable: pgrespcode in /home1/indiato6/public_html/nb-pay/Response.php on line 165
+[22-Jun-2016 18:29:28 America/Denver] PHP Notice:  Undefined index: PaymentId in /home1/indiato6/public_html/nb-pay/Response.php on line 11
+[22-Jun-2016 18:29:29 America/Denver] PHP Notice:  Undefined variable: pgrespcode in /home1/indiato6/public_html/nb-pay/Response.php on line 165

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: https://indiator.com
+Allow: https://indiator.com/sitemap.xml
+Disallow: /popular-attraction.php?
